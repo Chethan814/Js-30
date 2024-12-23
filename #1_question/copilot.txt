@@ -1,0 +1,36 @@
+You're encountering different behavior in the browser and Node.js due to how the function is being called. Let's break it down:
+
+Function Definition:
+function createHelloword(){
+    return ()=> "Hello World";
+}
+This function returns an arrow function that, when called, returns the string "Hello World".
+
+Assigning the Function:
+
+let f = createHelloword;
+Here, f is assigned the reference to the createHelloword function, not the result of calling it.
+
+Calling the Function:
+
+f();
+Since f is the reference to createHelloword, calling f() attempts to call createHelloword without the parentheses needed to invoke it. Therefore, it doesn't return the arrow function.
+
+Correct Way to Execute
+To correctly invoke the function and get the "Hello World" string, you need to call createHelloword first to get the arrow function and then call the arrow function:
+
+let f = createHelloword();
+console.log(f());  // "Hello World"
+Why It Behaves Differently
+In the Browser: Sometimes, browsers automatically handle some missing parentheses or incorrect function calls in certain contexts, which might lead to unexpected behavior.
+
+In Node.js: Node.jsstrictly follows the JavaScript specification, and such behavior is less likely to be handled automatically.
+
+Conclusion
+Always ensure you're calling your functions correctly to avoid such issues:
+
+javascript
+let f = createHelloword();
+console.log(f());  // "Hello World"
+
+
