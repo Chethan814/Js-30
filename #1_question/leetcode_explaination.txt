@@ -1,3 +1,5 @@
+https://leetcode.com/problems/create-hello-world-function/editorial/?envType=study-plan-v2&envId=30-days-of-javascript
+
 Overview
 This question is intended as an introduction to JavaScript functions. This editorial will cover their syntax and topics like closures and higher-order functions.
 
