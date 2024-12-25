@@ -36,9 +36,9 @@ To get started, I’m focusing on understanding basic concepts and solving simpl
 ## Problem List
 
 ### Basic Questions
-- 2667. Create Hello World Function
-- 2620. Counter
-- 2704. To Be Or Not To Be
+- 2667 Create Hello World Function
+- 2620 Counter
+- 2704 To Be Or Not To Be
 
 ### More to come...
 
