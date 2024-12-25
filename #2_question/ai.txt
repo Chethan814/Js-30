@@ -1,0 +1,46 @@
+Here's a solution to create a counter function in JavaScript that meets the requirements:
+
+javascript
+function createCounter(n) {
+    return function() {
+        return n++;
+    }
+}
+
+// Example 1
+let counter1 = createCounter(10);
+console.log(counter1());  // 10
+console.log(counter1());  // 11
+console.log(counter1());  // 12
+
+// Example 2
+let counter2 = createCounter(-2);
+console.log(counter2());  // -2
+console.log(counter2());  // -1
+console.log(counter2());  // 0
+console.log(counter2());  // 1
+console.log(counter2());  // 2
+Explanation
+Function Definition:
+
+javascript
+function createCounter(n) {
+    return function() {
+        return n++;
+    }
+}
+The createCounter function returns a new function. Each time this returned function is called, it returns the current value of n and then increments n by 1 for the next call.
+
+Creating the Counter:
+
+javascript
+let counter1 = createCounter(10);
+Here, counter1 is a function that will start counting from 10.
+
+Calling the Counter:
+
+javascript
+console.log(counter1());  // 10
+console.log(counter1());  // 11
+console.log(counter1());  // 12
+Each call to counter1() returns the current value of n and then increments n by 1.
