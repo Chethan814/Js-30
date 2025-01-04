@@ -1,0 +1,35 @@
+Let's break it down:
+Loop Control: The loop control should iterate over the length of the array, but currently, you're iterating over the array object itself.
+
+Reducer Function Application: You need to apply the reducer function to each element while updating the init value.
+
+Here's where to make changes:
+
+Correct Implementation (Structure):
+javascript
+var reduce = function(nums, fn, init) {
+    // Initialize the result with the initial value
+    let result = init;
+
+    // Iterate over the array
+    for(let i = 0; i < nums.length; i++) {
+        // Update result with the function applied to the current element and the accumulator
+        result = fn(result, nums[i]);
+    }
+
+    // Return the final result
+    return result;
+};
+Explanation:
+Initialization: Start with result = init.
+
+Loop: Iterate over each element of the array using a for loop.
+
+Apply Reducer Function: Update result by applying fn to the current value of result and the current element nums[i].
+
+Return Result: After iterating through all elements, return result.
+
+This will give you the correct behavior as specified in your question.
+
+Let me know if you need any further explanation or assistance with anything else!
+
